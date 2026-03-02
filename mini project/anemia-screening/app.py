@@ -17,7 +17,7 @@ if not os.path.exists(app.config['UPLOAD_FOLDER']):
 def analyze_image(image_path):
     """
     Analyze the image for potential anemia indicators.
-    Uses color analysis: converts to grayscale and checks average brightness.
+    Uses color analysis: Converts to grayscale and checks average brightness.
     Thresholds are arbitrary for demo; in real app, use trained model.
     Returns a dictionary with risk level, message, color, and brightness data.
     """
