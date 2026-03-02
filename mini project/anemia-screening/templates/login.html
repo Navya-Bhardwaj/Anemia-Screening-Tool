@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Anemia Screening</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="blur-bg">
+    <nav>
+        <div class="nav-container">
+            <h2>Anemia Screening</h2>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/screening">Screening Tool</a></li>
+                <li><a href="/doctor">Doctor Section</a></li>
+                <li><a href="/login" class="active">Login</a></li>
+                <li><a href="/profile">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Login</h1>
+            <p>Access your account to manage your health data.</p>
+        </header>
+        <main>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p>Don't have an account? <a href="/register">Register here</a></p>
+        </main>
+        <footer>
+            <p>Note: This is a pre-screening tool. Consult a doctor for accurate diagnosis.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h2>Anemia Screening</h2>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/screening">Screening Tool</a></li>
+                <li><a href="/doctor">Doctor Section</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/profile">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Analysis Result</h1>
+        </header>
+        <main>
+            <div class="dashboard">
+                <div class="risk-indicator" style="background-color: {{ result.color }};">
+                    <h2>{{ result.risk_level }}</h2>
+                </div>
+                <div class="result-details">
+                    <p>{{ result.message }}</p>
+                </div>
+                <div class="health-tips">
+                    <h3>Health Tips & Recommendations</h3>
+                    {% if result.risk_level == "High Risk" %}
+                        <ul>
+                            <li>Schedule an appointment with a healthcare professional immediately for proper diagnosis and treatment.</li>
+                            <li>Consider blood tests to confirm anemia and identify the underlying cause.</li>
+                            <li>While awaiting medical advice, maintain a balanced diet rich in iron and vitamin C.</li>
+                        </ul>
+                        <div class="next-steps">
+                            <h4>Next Steps:</h4>
+                            <p>Find a clinic near you: <a href="https://www.google.com/maps/search/anemia+clinic+near+me" target="_blank">Search for anemia clinics</a></p>
+                            <p>Learn more about anemia: <a href="https://www.mayoclinic.org/diseases-conditions/anemia/symptoms-causes/syc-20351360" target="_blank">Mayo Clinic - Anemia</a></p>
+                        </div>
+                    {% elif result.risk_level == "Moderate Risk" %}
+                        <ul>
+                            <li>Monitor your symptoms and consider scheduling a doctor's appointment within the next few weeks.</li>
+                            <li>Increase iron-rich foods in your diet: spinach, lentils, red meat, fortified cereals.</li>
+                            <li>Pair iron-rich foods with vitamin C sources like citrus fruits for better absorption.</li>
+                            <li>Stay hydrated and get adequate rest.</li>
+                        </ul>
+                        <div class="next-steps">
+                            <h4>Next Steps:</h4>
+                            <p>Schedule a follow-up screening in 3-6 months or if symptoms worsen.</p>
+                            <p>Educational resources: <a href="https://www.cdc.gov/nutrition/infantandtoddlernutrition/vitamins-minerals/iron.html" target="_blank">CDC - Iron and Anemia</a></p>
+                        </div>
+                    {% else %}
+                        <ul>
+                            <li>Continue maintaining a healthy lifestyle with balanced nutrition.</li>
+                            <li>Regular health check-ups are recommended to monitor overall health.</li>
+                            <li>Eat a variety of iron-rich foods as part of a balanced diet.</li>
+                        </ul>
+                        <div class="next-steps">
+                            <h4>Next Steps:</h4>
+                            <p>No immediate action required, but consider annual health screenings.</p>
+                            <p>Learn about preventive nutrition: <a href="https://www.nhlbi.nih.gov/health/anemia" target="_blank">NHLBI - Anemia Prevention</a></p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            <a href="/screening" class="btn">Upload Another Image</a>
+        </main>
+        <footer>
+            <p>Note: This is a pre-screening tool. Consult a doctor for accurate diagnosis.</p>
+        </footer>
+    </div>
+</body>
+</html>

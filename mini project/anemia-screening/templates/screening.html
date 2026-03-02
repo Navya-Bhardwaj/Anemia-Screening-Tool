@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anemia Screening Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="blur-bg">
+    <nav>
+        <div class="nav-container">
+            <h2>Anemia Screening</h2>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/screening" class="active">Screening Tool</a></li>
+                <li><a href="/doctor">Doctor Section</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/profile">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Anemia Screening Tool</h1>
+            <p>Upload an image of your fingernails or eyes for non-invasive anemia detection.</p>
+        </header>
+        <main>
+            <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+                <div class="upload-area">
+                    <label for="file-input" class="upload-label">
+                        <img src="{{ url_for('static', filename='images/camera-icon.png') }}" alt="Camera Icon" class="icon">
+                        <span>Click to upload image</span>
+                    </label>
+                    <input type="file" id="file-input" name="file" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn">Analyze Image</button>
+            </form>
+        </main>
+        <footer>
+            <p>Note: This is a pre-screening tool. Consult a doctor for accurate diagnosis.</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Anemia Screening</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="blur-bg">
+    <nav>
+        <div class="nav-container">
+            <h2>Anemia Screening</h2>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/screening">Screening Tool</a></li>
+                <li><a href="/doctor">Doctor Section</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/profile" class="active">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Your Profile</h1>
+            <p>Manage your personal information and health records.</p>
+        </header>
+        <main>
+            <div class="profile-info">
+                <h3>Personal Information</h3>
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <p><strong>Age:</strong> 30</p>
+                <p><strong>Gender:</strong> Male</p>
+            </div>
+            <div class="health-history">
+                <h3>Health History</h3>
+                <p>Recent screenings: 3</p>
+                <p>Last screening: 2023-10-01</p>
+                <p>Status: Normal</p>
+            </div>
+            <button class="btn">Edit Profile</button>
+        </main>
+        <footer>
+            <p>Note: This is a pre-screening tool. Consult a doctor for accurate diagnosis.</p>
+        </footer>
+    </div>
+</body>
+</html>

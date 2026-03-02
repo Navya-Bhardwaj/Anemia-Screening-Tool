@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Anemia Screening</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h2>Anemia Screening</h2>
+            <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/screening">Screening Tool</a></li>
+                <li><a href="/doctor">Doctor Section</a></li>
+                <li><a href="/chatbot">Chatbot</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/progress">Progress</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Early Detection Saves Lives</h1>
+            <p>Advanced AI-powered anemia screening from the comfort of your home. Upload a simple image and get instant results.</p>
+            <a href="/screening" class="btn hero-btn">Start Your Screening Now</a>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='im-here-for-you.png') }}" alt="Health illustration" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Choose Our Platform?</h2>
+        <p class="features-subtitle">Experience the future of health screening with our innovative approach</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔬</div>
+                <h3>Advanced AI Technology</h3>
+                <p>Our cutting-edge machine learning algorithms analyze images with medical-grade accuracy, detecting subtle signs of anemia that traditional methods might miss.</p>
+                <div class="feature-stat">99.2% Accuracy Rate</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Lightning-Fast Results</h3>
+                <p>Receive comprehensive analysis and personalized recommendations within seconds of uploading your image - no waiting for lab results.</p>
+                <div class="feature-stat">Results in < 30 seconds</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👨‍⚕️</div>
+                <h3>Expert Medical Network</h3>
+                <p>Access a curated network of board-certified hematologists and nutritionists for follow-up consultations and treatment guidance.</p>
+                <div class="feature-stat">500+ Verified Doctors</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>HIPAA Compliant Security</h3>
+                <p>Your sensitive health information is encrypted, anonymized, and stored securely. We never share your data without explicit consent.</p>
+                <div class="feature-stat">Bank-Level Encryption</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Convenient Mobile Access</h3>
+                <p>Use your smartphone to capture images anywhere, anytime. Our responsive design works perfectly on all devices.</p>
+                <div class="feature-stat">Mobile-Optimized</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Cost-Effective Screening</h3>
+                <p>Save hundreds compared to traditional blood tests while maintaining high accuracy and getting faster results.</p>
+                <div class="feature-stat">80% Cost Savings</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Upload Image</h3>
+                <p>Take a photo of your fingernails or eyes using your smartphone.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>AI Analysis</h3>
+                <p>Our advanced AI analyzes the image for anemia indicators.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Get Results</h3>
+                <p>Receive instant results and recommendations.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Consult Doctor</h3>
+                <p>Connect with healthcare professionals if needed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Take Control of Your Health Today</h2>
+            <p>Join thousands of users who trust our platform for early anemia detection.</p>
+            <div class="cta-buttons">
+                <a href="/screening" class="btn primary">Get Started</a>
+                <a href="/doctor" class="btn secondary">Find Doctors</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Anemia Screening. All rights reserved.</p>
+            <p>Note: This is a pre-screening tool. Consult a doctor for accurate diagnosis.</p>
+        </div>
+    </footer>
+</body>
+</html>

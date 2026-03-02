@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Section - Anemia Screening</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="blur-bg">
+    <nav>
+        <div class="nav-container">
+            <h2>Anemia Screening</h2>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/screening">Screening Tool</a></li>
+                <li><a href="/doctor" class="active">Doctor Section</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/profile">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Doctor Section</h1>
+            <p>Find and connect with healthcare professionals specializing in anemia and related conditions.</p>
+        </header>
+        <main>
+            <div class="doctor-list">
+                <div class="doctor-card">
+                    <h3>Dr. Rajeev Gupta</h3>
+                    <p>Hematologist</p>
+                    <p>Specializes in anemia diagnosis and treatment.</p>
+                    <button class="btn">Contact</button>
+                </div>
+                <div class="doctor-card">
+                    <h3>Dr. Neetu Sharma</h3>
+                    <p>General Practitioner</p>
+                    <p>Experienced in primary care and anemia screening.</p>
+                    <button class="btn">Contact</button>
+                </div>
+                <div class="doctor-card">
+                    <h3>Dr. Jay Tomar</h3>
+                    <p>Nutritionist</p>
+                    <p>Focuses on dietary management for anemia patients.</p>
+                    <button class="btn">Contact</button>
+                </div>
+                <div class="doctor-card">
+                    <h3>Dr. Vidhatri Nautiyal</h3>
+                    <p>Nutritionist</p>
+                    <p>Focuses on dietary management for anemia patients.</p>
+                    <button class="btn">Contact</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Note: This is a pre-screening tool. Consult a doctor for accurate diagnosis.</p>
+        </footer>
+    </div>
+</body>
+</html>
